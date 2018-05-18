@@ -11,9 +11,13 @@ phases:
       - echo Build started on `date`
       - echo Getting packages
       - echo Compiling the Go code...
+      - mkdir /go/src/testproject
+      - cp -R $CODEBUILD_SRC_DIR /go/src/testproject
       - go build main.go 
   post_build:
     commands:
+      
+
       - echo Build completed on `date`
 artifacts:
   files:
