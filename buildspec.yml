@@ -12,8 +12,8 @@ phases:
       - echo Getting packages
       - echo Compiling the Go code...
       - mkdir /go/src/testproject
-      - cp -R $CODEBUILD_SRC_DIR /go/src/testproject
-      - ls /go/src
+      - cp -R $CODEBUILD_SRC_DIR /go/src
+      - ls /go/src/testproject
       - go build /go/src/testproject/main.go 
   post_build:
     commands:
