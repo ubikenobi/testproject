@@ -13,7 +13,7 @@ phases:
       - echo Compiling the Go code...
       - mkdir /go/src/testproject
       - cp -R $CODEBUILD_SRC_DIR /go/src/testproject
-      - go build main.go 
+      - go build $GOPATH/src/testproject/main.go 
   post_build:
     commands:
       
