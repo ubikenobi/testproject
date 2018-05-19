@@ -19,9 +19,7 @@ phases:
       - go build /go/src/testproject/main.go 
   post_build:
     commands:
-       - ls /go/src/testproject
-     
-
+      - ls /go/src/testproject
       - echo Build completed on `date`
 artifacts:
   files:
