@@ -16,7 +16,7 @@ phases:
       - cp -R $CODEBUILD_SRC_DIR /go/src
       - ls /go/src/testproject
       - go test ./...
-      - go build /go/src/testproject/main.go -o testproject
+      - go build /go/src/testproject/main.go -o testproject.bin
   post_build:
     commands:
       - ls /go/src/testproject
