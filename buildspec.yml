@@ -17,7 +17,7 @@ phases:
       - ls /go/src/testproject
       - go test ./...
       - cd /go/src/testproject
-      - go build-o outbin
+      - go build -o outbin
   post_build:
     commands:
       - ls /go/src/testproject
