@@ -6,7 +6,6 @@ phases:
       - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
       - echo GOPATH - $GOPATH
       - echo GOROOT - $GOROOT
-      - go get github.com/sirupsen/logrus
   build:
     commands:
       - echo Compiling the Go code...
