@@ -12,7 +12,7 @@ phases:
       - mkdir /go/src/testproject
       - cp -R $CODEBUILD_SRC_DIR /go/src
       - cd /go/src/testproject
-      - dep ensure -update
+      - dep ensure
       - ls /go/src/testproject
       - go test ./...
       - cd /go/src/testproject
