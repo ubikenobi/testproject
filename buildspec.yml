@@ -9,14 +9,15 @@ phases:
       - go get github.com/sirupsen/logrus
   build:
     commands:
-      - echo Build started on `date`
-      - echo Getting packages
       - echo Compiling the Go code...
       - mkdir /go/src/testproject
       - cp -R $CODEBUILD_SRC_DIR /go/src
+      - cd /go/src/testproject
+      - dep ensure -update
       - ls /go/src/testproject
       - go test ./...
       - cd /go/src/testproject
+      
       - go build -o ./outbin
   post_build:
     commands:
